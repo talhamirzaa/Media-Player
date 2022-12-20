@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mediaplayer.MediaPlayerController">
+   <center>
+      <StackPane fx:id="pane" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 4px; -fx-border-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
+            <VBox alignment="BOTTOM_CENTER" maxHeight="40.0" prefHeight="50.0" style="-fx-background-color: black;" StackPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <Slider fx:id="progressBar" />
+                  <HBox alignment="BOTTOM_CENTER" maxHeight="40.0" prefHeight="30.0" style="-fx-background-color: black;">
+                     <children>
+                        <Button fx:id="openFile" mnemonicParsing="false" onAction="#OpenFileMethod" text="OpenFile">
+                           <HBox.margin>
+                              <Insets bottom="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#playVideo" text="Play">
+                           <HBox.margin>
+                              <Insets bottom="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#pauseVideo" text="Pause">
+                           <HBox.margin>
+                              <Insets bottom="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#stopVideo" text="Stop">
+                           <HBox.margin>
+                              <Insets bottom="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#furtherSlowDownVideo" text="0.5x">
+                           <HBox.margin>
+                              <Insets bottom="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#back5" text="-5s">
+                           <HBox.margin>
+                              <Insets bottom="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#skip5" text="+5s">
+                           <HBox.margin>
+                              <Insets bottom="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#furtherSpeedUpVideo" text="2.0x">
+                           <HBox.margin>
+                              <Insets bottom="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Slider fx:id="volumeSlider">
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </Slider>
+                     </children>
+                  </HBox>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

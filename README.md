@@ -11,7 +11,7 @@ Now,
 To Run the Media Player java Program in terminal:-  
     
 Step 3: move back one directory.  
-cd <<your folder path>>\src  
+cd <<your Project's folder path>>\src    
   
 Step 4: Run with following command.  
 java --module-path <<your javafx lib folder path>> --add-modules javafx.controls,javafx.fxml,javafx.media,javafx.graphics mediaplayer.MediaPlayer  
